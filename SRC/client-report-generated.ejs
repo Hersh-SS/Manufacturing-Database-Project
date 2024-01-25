@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Client Report For <%= clientData.clientName%></title>
+</head>
+<body>
+    <h1>Client Report For <%= clientData.clientName%></h1>
+    <p>Client Name: <%= clientData.clientName%><br>Phone Number: <%= clientData.phoneNumber%><br>Shipping Address: <%= clientData.shippingAddress%><br>Email: <%= clientData.email%><br></p>
+    <p>Total Spent on Orders: <%= total%>$<br><br>List of All Products Ordered:</p>
+    <div>
+    <table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>        
+    </tr>
+    
+    <%
+    if(products.length!=0){
+    var i=1;
+    products.forEach(function(data){
+    %>
+    <tr>
+        <td><%=data.productName %></td>
+        <td><%=data.quantity %></td>
+    </tr>
+    <%  i++; }) %>
+    <% } else{ %>
+        <tr>
+            <td colspan="7">No Data Found</td>
+        </tr>
+    <% } %>
+    </table>
+    </div>
+</body>
+</html>

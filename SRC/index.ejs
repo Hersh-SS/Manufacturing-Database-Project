@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title><%= title%></title>
+</head>
+<body>
+<h1><%= title%></h1>
+<hr>
+<form action="/theCode" method="POST">
+    Product ID : <br>
+    <input type="text" name="ProductID" id="productID"><br>
+    Product Name: <br>
+    <input type="text" name="ProductName" id="productName"><br>
+    price: <br>
+    <input type="number" name="price" id="price"><br>
+    current stock: <br>
+    <input type="number" name="CurrentStock" id="currentStock"><br>
+    set stock: <br>
+    <input type="number" name="SetStock" id="setStock"><br>
+    plan number: <br>
+    <input type="text" name="PlanNumber" id="planNumber"><br>
+    production time: <br>
+    <input type="number" name="ProductionTime" id="productionTime"><br>
+    production cost: <br>
+    <input type="number" name="ProductionCost" id="productionCost"><br>
+    <br>
+    <button type="submit">Add</button>
+</form>
+<hr>
+<form action="/search-product" method="GET">
+    <button type="submit">Click here to search for a product</button>
+</form>
+<br><br>
+<form action="/product-list" method="GET">
+    <button type="submit">Click here to see all the product including the added product</button>
+</form>
+<br><br>
+<form action="/client-report" method="GET">
+    <button type="submit">Click here to generate a client report</button>
+</form>
+
+
+
+</body>
+</html>
